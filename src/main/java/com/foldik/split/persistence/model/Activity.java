@@ -21,6 +21,10 @@ public class Activity {
     @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime endTime;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "USER_ID")
+    private User user;
+
     public Long getId() {
         return id;
     }
@@ -51,5 +55,13 @@ public class Activity {
 
     public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

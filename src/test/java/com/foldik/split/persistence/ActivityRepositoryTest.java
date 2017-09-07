@@ -1,6 +1,7 @@
 package com.foldik.split.persistence;
 
 import com.foldik.split.persistence.model.Activity;
+import com.foldik.split.persistence.model.User;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -64,7 +65,7 @@ public class ActivityRepositoryTest {
         List<Activity> result = underTest.findActivitiesBetween(
                 LocalDateTime.parse("2017-09-07T18:20:00"), LocalDateTime.parse("2017-09-07T19:00:00"));
 
-        assertThat(result, hasSize(0));
+        assertThat(result, hasSize(1));
         assertThat(result.get(0).getActivityName(), is("Dance"));
     }
 
