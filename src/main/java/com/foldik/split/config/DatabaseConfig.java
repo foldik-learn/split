@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 @Configuration
-public class AppConfig {
+public class DatabaseConfig {
 
     @Autowired
     private Environment env;
@@ -29,6 +29,6 @@ public class AppConfig {
 
     @Bean(initMethod = "start", destroyMethod = "stop")
     public Server server() throws SQLException {
-        return Server.createWebServer("-webPort", env.getRequiredProperty("db.h2.server.port"));
+        return Server.createWebServer("-webPort", env.getRequiredProperty("db.h2.port"));
     }
 }

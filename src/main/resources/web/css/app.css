@@ -1,0 +1,30 @@
+html {
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e1e0;
+    flex-direction: column;
+}
+
+.activity {
+    width: 400px;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+    background: #fff;
+    color: black;
+    font-size: 1.5rem;
+    text-align: left;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
